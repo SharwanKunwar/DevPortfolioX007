@@ -6,13 +6,6 @@ import { useRef } from 'react';
 
 // Component
 function Home() {
-  const aboutRef = useRef(null);
-
-  const scrollToAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   
 
   return (
@@ -100,7 +93,7 @@ function Home() {
         {/* ////////// */}
         <div className='absolute bottom-0  z-10 w-[90%] h-[100px] flex justify-center items-center'>
           <div className='w-[60px] h-[60px] flex justify-center items-center'>
-            <a href="#sec"><ChevronDown size={52} strokeWidth={1} className="text-gray-700 border rounded-full animate-bounce" /></a>
+            <ChevronDown size={52} strokeWidth={1} className="text-gray-700 border rounded-full animate-bounce" />
           </div>
         </div>
 
@@ -108,9 +101,9 @@ function Home() {
         
       </div>
 
-      <div ref={aboutRef}>
+      
         <About/>
-      </div>
+      
     </div>
   );
 }
