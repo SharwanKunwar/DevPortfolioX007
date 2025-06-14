@@ -14,13 +14,8 @@ function App() {
         el: scrollRef.current,
         smooth: true,
         smartphone:{
-          smooth: true,
-          
-          multiplier:1000
-        },
-
-        
-        
+          smooth: false
+        }
       });
       return () => {
         if (scroll) scroll.destroy();
@@ -32,7 +27,7 @@ function App() {
   
     <>
       <Navbar/>
-      <div ref={scrollRef} data-scroll-container className='relative'>
+      <div id='main' ref={scrollRef} data-scroll-container className='relative'>
       <Outlet/>
       </div>
     </>
