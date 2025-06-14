@@ -10,8 +10,8 @@ function Navbar() {
   const MenuList = ['Home','About','Education','Projects','Contact'];
 
   return (
-    <div className='sticky top-0 bg-gray-400/30 backdrop-blur-lg w-full h-[100px] flex justify-center items-center shadow-sm z-100'>
-      <nav className='bg-white/30 drop-shadow-2xl border-2 border-white/30 w-[90%] h-[70%] rounded-full flex justify-between items-center shadow-md'>
+    <div className='md:sticky md:top-0 bg-gray-400/30 backdrop-blur-lg w-full md:h-[100px] flex justify-center md:items-center items-start shadow-sm z-100'>
+      <nav className='bg-white/30 drop-shadow-2xl border-2 border-white/30 md:w-[90%] md:h-[70%] h-[70px] py-10 md:py-0 md:rounded-full flex justify-between items-center shadow-md'>
         
         {/* Logo */}
         <div className='md:w-[10%] w-[20%] h-full flex justify-center items-center'>
