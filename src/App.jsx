@@ -13,7 +13,8 @@ function App() {
       const scroll = new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
-        smartphone: { smooth: true }
+        smartphone: { smooth: true,multiplier:10 },
+        
       });
       return () => {
         if (scroll) scroll.destroy();
