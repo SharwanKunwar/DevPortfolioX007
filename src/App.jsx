@@ -5,7 +5,9 @@ import { Outlet } from 'react-router'
 
 function App() {
   useEffect(()=>{
-    alert("Open this site in laptop or pc for better experience");
+    setTimeout(()=>{
+      alert("Open this site in laptop or pc for better experience");
+    },3000);
   },[])
   
   return (
