@@ -28,8 +28,8 @@ function Home() {
       <div className='w-screen md:flex md:p-20 p-5 gap-10  md:flex-row relative'>
 
         {/* Left Box */}
-        <div className='md:order-1 order-2 md:w-6/12 md:h-full h-6/10 flex flex-col md:text-start text-center  md:pt-30 pt-20 ' data-scroll>
-          <h1 className='md:text-6xl text-5xl font-bold font-sans'>Hi, I'm</h1>
+        <div className='md:order-1 order-2 md:w-6/12 md:h-full h-6/10 flex flex-col md:text-start text-center  md:pt-30 pt-20 '>
+          <h1 className='md:text-6xl text-6xl font-bold font-sans'>Hi, I'm</h1>
           <h2 className='md:text-6xl text-2xl font-bold font-sans pt-2'>Sharwan Jung Kunwar</h2>
           <br/>
           <h3 className='md:text-4xl text-2xl font-sans'>Full-Stack Developer</h3>
