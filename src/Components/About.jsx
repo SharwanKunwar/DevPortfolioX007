@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className='bg-sky-400 w-screen h-screen'>
+    <div className='bg-sky-400 w-screen h-screen ' data-scroll>
         About
         <div className='bg-purple-400 w-full h-[500px]'></div>
         

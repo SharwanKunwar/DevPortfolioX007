@@ -2,8 +2,8 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div>
-      this is contact
+    <div className='bg-red-400 w-screen h-screen'>
+      
     </div>
   )
 }

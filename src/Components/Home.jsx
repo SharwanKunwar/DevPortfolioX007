@@ -13,9 +13,7 @@ function Home() {
       const scroll = new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
-        smartphone:{
-          smooth: false
-        }
+        
       });
       return () => {
         if (scroll) scroll.destroy();
@@ -25,12 +23,12 @@ function Home() {
 
   return (
 
-    <div ref={scrollRef} className='relative'>
+    <div id='main' ref={scrollRef} data-scroll-container className='relative'>
       {/* Container split in two parts */}
       <div className='w-screen md:flex md:p-20 p-5 gap-10  md:flex-row relative'>
 
         {/* Left Box */}
-        <div className='md:order-1 order-2 md:w-6/12 md:h-full h-6/10 flex flex-col md:text-start text-center  md:pt-30 pt-20 '>
+        <div className='md:order-1 order-2 md:w-6/12 md:h-full h-6/10 flex flex-col md:text-start text-center  md:pt-30 pt-20 ' data-scroll>
           <h1 className='md:text-6xl text-6xl font-bold font-sans'>Hi, I'm</h1>
           <h2 className='md:text-6xl text-3xl font-bold font-sans pt-2'>Sharwan Jung Kunwar</h2>
           <br/>
