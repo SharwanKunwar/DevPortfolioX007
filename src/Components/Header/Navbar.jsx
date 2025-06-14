@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
@@ -8,6 +8,20 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const MenuList = ['Home', 'About', 'Education', 'Projects', 'Contact'];
+
+  useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+
+  // Cleanup on unmount just in case
+  return () => {
+    document.body.style.overflow = '';
+  };
+}, [isOpen]);
+
 
   return (
     <div className="sticky top-0 bg-gray-400/30 backdrop-blur-lg w-full md:h-[100px] flex justify-center md:items-center items-start shadow-sm z-40">
@@ -71,7 +85,7 @@ function Navbar() {
       {/* Mobile Menu Popup */}
       {isOpen && (
         <div
-          className="bg-black/30 backdrop-blur-sm fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-50"
+          className="fixed bg-black/30 backdrop-blur-lg top-0 left-0 w-screen h-screen flex justify-center items-center "
           aria-modal="true"
         >
           <motion.div
