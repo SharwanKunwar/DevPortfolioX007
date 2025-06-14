@@ -1,16 +1,31 @@
 import {easeInOut, motion} from 'motion/react'
 import { ChevronDown } from 'lucide-react';
 import About from './About';
-import { useRef } from 'react';
+import LocomotiveScroll from 'locomotive-scroll'
+import { useEffect, useRef } from 'react'
 
 
 // Component
 function Home() {
+  const scrollRef = useRef(null);
   
+    useEffect(() => {
+      const scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        smartphone:{
+          smooth: false
+        }
+      });
+      return () => {
+        if (scroll) scroll.destroy();
+      };
+    }, []);
+
 
   return (
 
-    <div className='relative'>
+    <div ref={scrollRef} className='relative'>
       {/* Container split in two parts */}
       <div className='w-screen md:flex md:p-20 p-5 gap-10  md:flex-row relative'>
 
@@ -97,13 +112,10 @@ function Home() {
           </div>
         </div>
 
-      
-        
       </div>
 
-      
-        <About/>
-      
+      <About/>
+
     </div>
   );
 }
