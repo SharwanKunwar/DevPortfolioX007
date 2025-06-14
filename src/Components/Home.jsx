@@ -77,25 +77,25 @@ function Home() {
             </div>
             <div>
               <pre className="text-emerald-400 font-mono text-sm overflow-x-auto px-10 py-6">
-                <span class="text-blue-400">const</span> <span class="text-yellow-300">developer</span> = {`{\n`}
-                  &nbsp;&nbsp;name: <span class="text-green-300">"Sharwan jung kunwar"</span>,{'\n'}
-                  &nbsp;&nbsp;title: <span class="text-green-300">"Full-Stack Developer"</span>,{'\n'}
+                <span className="text-blue-400">const</span> <span className="text-yellow-300">developer</span> = {`{\n`}
+                  &nbsp;&nbsp;name: <span className="text-green-300">"Sharwan jung kunwar"</span>,{'\n'}
+                  &nbsp;&nbsp;title: <span className="text-green-300">"Full-Stack Developer"</span>,{'\n'}
                   &nbsp;&nbsp;skills: [{'\n'}
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-300">"JavaScript"</span>,{'\n'}
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-300">"React"</span>,{'\n'}
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-300">"Tailwindcss"</span>,{'\n'}
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-300">"Motion"</span>,{'\n'}
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-300">"PostgreSQL"</span>{'\n'}
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-300">"JavaScript"</span>,{'\n'}
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-300">"React"</span>,{'\n'}
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-300">"Tailwindcss"</span>,{'\n'}
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-300">"Motion"</span>,{'\n'}
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-300">"PostgreSQL"</span>{'\n'}
                   &nbsp;&nbsp;],{'\n'}
-                  &nbsp;&nbsp;contact: <span class="text-green-300">
-                  <a href="mailto:sharwankunwar07@gmail.com" class="underline">"sharwankunwar07@gmail.com"</a>
+                  &nbsp;&nbsp;contact: <span className="text-green-300">
+                  <a href="mailto:sharwankunwar07@gmail.com" className="underline">"sharwankunwar07@gmail.com"</a>
                 </span>{'\n'}
                 {'};\n\n'}
-                <span class="text-blue-400">function</span> <span class="text-yellow-300">createProject</span>(<span class="text-orange-300">idea</span>) {`{\n`}
-                  &nbsp;&nbsp;<span class="text-blue-400">return</span> {`{\n`}
+                <span className="text-blue-400">function</span> <span className="text-yellow-300">createProject</span>(<span className="text-orange-300">idea</span>) {`{\n`}
+                  &nbsp;&nbsp;<span className="text-blue-400">return</span> {`{\n`}
                   &nbsp;&nbsp;&nbsp;&nbsp;concept: idea,{'\n'}
-                  &nbsp;&nbsp;&nbsp;&nbsp;execution: <span class="text-yellow-300">developer</span>.skills,{'\n'}
-                  &nbsp;&nbsp;&nbsp;&nbsp;result: <span class="text-green-300">"Amazing web experience"</span>{'\n'}
+                  &nbsp;&nbsp;&nbsp;&nbsp;execution: <span className="text-yellow-300">developer</span>.skills,{'\n'}
+                  &nbsp;&nbsp;&nbsp;&nbsp;result: <span className="text-green-300">"Amazing web experience"</span>{'\n'}
                   &nbsp;&nbsp;{'}'}{'\n'}
                 {'}'}
               </pre>
