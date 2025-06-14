@@ -1,36 +1,26 @@
-// Imports
-import LocomotiveScroll from 'locomotive-scroll'
-import { useEffect, useRef } from 'react'
-import React from 'react'
 import {easeInOut, motion} from 'motion/react'
 import { ChevronDown } from 'lucide-react';
-import { Link } from 'lucide-react';
 import About from './About';
+import { useRef } from 'react';
 
 
 // Component
 function Home() {
-  const scrollRef = useRef(null);
+  const aboutRef = useRef(null);
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      smartphone: { smooth: true }
-    });
-    return () => {
-      if (scroll) scroll.destroy();
-    };
-  }, []);
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
 
   return (
 
-    <div ref={scrollRef} data-scroll-container className='relative'>
+    <div className='relative'>
       {/* Container split in two parts */}
       <div className='w-screen md:flex md:p-20 p-5 gap-10  md:flex-row relative'>
 
-        
-        
         {/* Left Box */}
         <div className='md:order-1 order-2 md:w-6/12 md:h-full h-6/10 flex flex-col md:text-start text-center  md:pt-30 pt-20 '>
           <h1 className='md:text-6xl text-6xl font-bold font-sans'>Hi, I'm</h1>
@@ -110,14 +100,17 @@ function Home() {
         {/* ////////// */}
         <div className='absolute bottom-0  z-10 w-[90%] h-[100px] flex justify-center items-center'>
           <div className='w-[60px] h-[60px] flex justify-center items-center'>
-            <a href="about"><ChevronDown size={52} strokeWidth={1} className="text-gray-700 border rounded-full animate-bounce" /></a>
+            <a href="#sec"><ChevronDown size={52} strokeWidth={1} className="text-gray-700 border rounded-full animate-bounce" /></a>
           </div>
         </div>
 
       
         
       </div>
-      <About/>
+
+      <div ref={aboutRef}>
+        <About/>
+      </div>
     </div>
   );
 }
